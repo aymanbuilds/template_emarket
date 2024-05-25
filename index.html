@@ -27,12 +27,32 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-
                 <div class="headerButtons">
                     <a href="#pricing" class="primary">
                         <img src="assets/icons/purchase.png" alt="Purchase">
                         <span>Purchase</span>
                     </a>
+                </div>
+                <div class="navMobile">
+                    <div class="menu" onclick="showMenu()">
+                        <img src="assets/icons/menu.png" alt="Menu">
+                    </div>
+                    <div id="mobileNav" class="inner">
+                        <ul>
+                            <li><img src="assets/icons/homeicon.png" alt="Home"><a href="#home" class="active">Home</a>
+                            </li>
+                            <li><img src="assets/icons/abouticon.png" alt="About"><a href="#about">About VR Headset</a>
+                            </li>
+                            <li><img src="assets/icons/featuresicon.png" alt="Features"><a href="#features">Features</a>
+                            </li>
+                            <li><img src="assets/icons/pricingicon.png" alt="Pricing"><a href="#pricing">Pricing</a>
+                            </li>
+                            <li><img src="assets/icons/contacticon.png" alt="Contact"><a href="#contact">Contact</a>
+                            </li>
+                            <li onclick="hideMenu()"><img src="assets/icons/closeicon.png" alt="Close">Close Menu
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </header>
             <section id="home" class="descriptive">
@@ -46,7 +66,7 @@
                             <img src="assets/icons/about.png" alt="About">
                             <span>About Product</span>
                         </a>
-                        <a class="secondary">
+                        <a href="#pricing" class="secondary">
                             <img src="assets/icons/pricing.png" alt="Pricing">
                             <span>Check Out Pricing</span>
                         </a>
