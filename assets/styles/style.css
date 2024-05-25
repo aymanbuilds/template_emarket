@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(52, 137, 210);
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.headerWrapper {
+    padding: 50px 80px;
+    background-color: royalblue;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    position: relative;
+}
+
+.headerWrapper::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background-color: rgb(60, 146, 221);
+}
+
+header.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logoContainer img {
+    width: 32px;
+}
+
+.logoContainer span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+header.main .logoContainer span {
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+header.main nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header.main nav ul li a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    display: block;
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+    transition: 0.4s;
+}
+
+header.main nav ul li a:hover {
+    border-bottom: 1px solid white;
+}
+
+header.main nav ul li a.active {
+    border-bottom: 1px solid white;
+}
+
+button.primary,
+a.primary {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    align-self: flex-start;
+    overflow: hidden;
+}
+
+button.primary img,
+a.primary img,
+button.secondary img,
+a.secondary img {
+    width: 28px;
+    transition: 0.4s;
+}
+
+button.primary:hover img,
+a.primary:hover img,
+button.secondary:hover img,
+a.secondary:hover img {
+    transform: translateX(-48px);
+}
+
+button.primary span,
+a.primary span,
+button.secondary span,
+a.secondary span {
+    transition: 0.4s;
+}
+
+button.primary:hover span,
+a.primary:hover span,
+button.secondary:hover span,
+a.secondary:hover span {
+    transform: translateX(-48px);
+}
+
+button.secondary,
+a.secondary {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    align-self: flex-start;
+    overflow: hidden;
+}
+
+.descriptive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.descriptive .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+.descriptive .content h1 {
+    color: white;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.descriptive .content p {
+    color: #f6f6f6;
+}
+
+.descriptiveButtons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.descriptive .display {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descriptive .display .inner {
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid #eee;
+    position: relative;
+}
+
+.descriptive .display .inner::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.descriptive .display .inner img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 600px;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(30px 30px 40px rgba(0, 0, 0, 0.4));
+}
+
+.cardsContainer {
+    padding: 80px;
+}
+
+header:not(.main) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header:not(.main) h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+header:not(.main) p {
+    color: #555;
+}
+
+.cardsContainer .inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.cardsContainer .inner::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -80px;
+    width: 90%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: #f4f4f4;
+    border-radius: 30px;
+}
+
+.card {
+    position: relative;
+    width: 18rem;
+    padding: 40px 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.blue {
+    background-color: rgb(77, 117, 237);
+}
+
+.green {
+    background-color: #9d33db;
+}
+
+.pink {
+    background-color: rgb(240, 117, 138);
+}
+
+.violet {
+    background-color: rgb(150, 87, 227);
+}
+
+.card:nth-child(odd) {
+    transform: translateY(30px);
+}
+
+.card .icon {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: white;
+}
+
+.card:nth-child(odd) .icon {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+}
+
+.card button,
+.card a {
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.informative {
+    padding: 80px;
+    position: relative;
+}
+
+.informative .container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#features .container {
+    margin-top: 80px;
+}
+
+.informative .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.informative .content header {
+    gap: 10px;
+}
+
+.informative .content .listview {
+    margin-top: 20px;
+}
+
+.listview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.listcard {
+    max-width: 14rem;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.listcard p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.informative .display {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.informative .display .inner {
+    width: 300px;
+    height: 300px;
+    background-color: #f6f6f6;
+    position: relative;
+    border-radius: 50%;
+}
+
+.informative .display .inner img {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    max-width: 600px;
+    transform: translate(-50%, -50%);
+}
+
+#pricing {
+    background-color: #f6f6f6;
+}
+
+#pricing .display {
+    flex: 1;
+}
+
+#pricing .display .inner {
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
+}
+
+#pricing .display .inner img {
+    width: auto;
+    max-width: 550px;
+}
+
+#pricing .display .inner::before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.pricing .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#pricing .pricing {
+    margin-top: 80px;
+}
+
+.pricecard {
+    width: 17rem;
+    padding: 40px 30px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.04) 0 20px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricecard .tag {
+    position: absolute;
+    right: -40px;
+    top: 12px;
+    width: 10rem;
+    padding: 10px 0;
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+    transform: rotate(40deg);
+    transform-origin: center;
+}
+
+.price .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricecard .title h2 {
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.pricecard .title div {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #555;
+}
+
+.pricecard .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pricecard .price .sup {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.pricecard .price .number {
+    font-size: 3rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+.pricecard ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+.pricecard ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pricecard ul li img {
+    width: 24px;
+}
+
+.pricecard ul li span {
+    color: #666;
+    font-size: 1rem;
+}
+
+.pricecard button {
+    margin-top: 40px;
+    background-color: royalblue;
+}
+
+.pricecard button span {
+    color: white;
+}
+
+.contactContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#contact .contactContainer {
+    margin-top: 80px;
+}
+
+.contact {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.contact a:not(.primary),
+.contact a:not(.secondary){
+    width: 60px;
+    height: 60px;
+    display: grid;
+    margin: 0 auto;
+    place-items: center;
+    border-radius: 30px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.contact img {
+    width: 40px;
+}
+
+.contact .title {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.contact .text {
+    margin-top: 4px;
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    padding: 80px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+footer .inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer div {
+    flex: 1;
+}
+
+footer div h2 {
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+    color: #444;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer nav ul li a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.1rem;
+}
+
+footer div.languages ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer div.languages ul li {
+    color: #333;
+    padding: 10px 20px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+footer div.languages ul li.active {
+    background-color: royalblue;
+    color: white;
+}
+
+footer div.socials .logoContainer{
+    margin-top: 40px;
+    opacity: 0.4;
+}
+
+footer div.socials .logoContainer img{
+    width: 48px;
+}
+
+footer div.socials .logoContainer span{
+    color: #555;
+}
+
+footer div.socials ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+}
+
+footer div.socials ul li img {
+    width: 38px;
+    cursor: pointer;
+}
+
+footer .copyright {
+    display: flex;
+}
+
+footer .copyright p {
+    color: #777;
+}

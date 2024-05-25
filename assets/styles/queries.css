@@ -1,0 +1,174 @@
+@media (max-width:1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    header.main nav ul {
+        display: none;
+    }
+
+    .descriptive .display .inner img {
+        max-width: 500px;
+    }
+
+    .descriptive .display {
+        justify-content: flex-end;
+    }
+
+    .descriptive .display .inner {
+        width: 380px;
+        height: 380px;
+    }
+
+    .cardsContainer .inner::before {
+        background-color: transparent;
+    }
+
+    .informative .display .inner img {
+        max-width: 400px;
+    }
+
+    #pricing .display .inner img {
+        max-width: 500px;
+    }
+
+    .contactContainer {
+        width: 100%;
+    }
+
+    footer .inner {
+        gap: 80px;
+    }
+
+    footer div {
+        flex: initial;
+        width: 100%;
+    }
+}
+
+@media (max-width:1100px) {
+    #pricing .display .inner {
+        width: 300px;
+        height: 300px;
+    }
+
+    #pricing .display .inner img {
+        max-width: 400px;
+    }
+
+    .contactContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:1040px) {
+    .headerWrapper::before {
+        width: 20%;
+    }
+
+    .descriptive .display {
+        display: none;
+    }
+
+    #features .display {
+        display: none;
+    }
+
+    #pricing .container {
+        flex-direction: column;
+    }
+
+    #pricing .display {
+        flex: initial;
+        width: 100%;
+    }
+
+    #pricing .content {
+        flex: initial;
+        width: 100%;
+    }
+}
+
+@media (max-width:840px) {
+    .contactContainer {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card:nth-child(odd) {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:700px) {
+    #features .container {
+        flex-wrap: wrap;
+        gap: 6rem;
+    }
+
+    #features .content {
+        flex: initial;
+        width: 100%;
+    }
+
+    .contactContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .headerButtons {
+        display: none;
+    }
+
+    #pricing .display .inner img {
+        max-width: 100%;
+    }
+
+    .contactContainer {
+        width: 70%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:530px) {
+    .contactContainer {
+        width: 80%;
+    }
+
+    footer div.socials ul {
+        width: 100%;
+    }
+
+    .headerWrapper{
+        padding: 50px 40px;
+    }
+
+    .cardsContainer{
+        padding: 80px 40px;
+    }
+
+    .informative{
+        padding: 80px 40px;
+    }
+
+    footer{
+        padding: 80px 40px;
+    }
+}
+
+@media (max-width:480px) {
+    .contactContainer {
+        width: 90%;
+    }
+}
+
+@media (max-width:430px) {
+    .contactContainer {
+        width: 100%;
+    }
+
+    .pricecard{
+        width: 100%;
+    }
+}
