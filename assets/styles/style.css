@@ -184,6 +184,9 @@ a.secondary {
     width: 70px;
     height: 70px;
     background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(20px);
     display: grid;
     place-items: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
@@ -191,6 +194,13 @@ a.secondary {
     z-index: 1001;
     cursor: pointer;
     user-select: none;
+    transition: 0.4s;
+}
+
+.navMobile.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
 }
 
 .navMobile img {
@@ -230,11 +240,11 @@ a.secondary {
 .navMobile .inner ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
-.navMobile .inner ul li {
+.navMobile .inner ul li:not(.line) {
     display: flex;
+    padding: 14px;
     align-items: center;
     gap: 20px;
     color: #444;
@@ -242,9 +252,8 @@ a.secondary {
     transition: 0.4s;
 }
 
-.navMobile .inner ul li:last-child {
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
+.navMobile .inner ul li:not(.line):hover {
+    background-color: #f4f4f4;
 }
 
 .navMobile .inner ul li img {
@@ -254,6 +263,18 @@ a.secondary {
 .navMobile .inner ul li a {
     text-decoration: none;
     color: #444;
+}
+
+.line {
+    width: 90%;
+    margin: 10px auto;
+    background-color: #ddd;
+    height: 1px;
+    padding: 0;
+}
+
+.line:hover {
+    background-color: #ddd;
 }
 
 .descriptive {
@@ -484,7 +505,7 @@ header:not(.main) p {
 .listcard {
     max-width: 14rem;
     padding: 10px 10px;
-    border-radius: 10px;
+    border-radius: 30px;
     color: white;
 }
 

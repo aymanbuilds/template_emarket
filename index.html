@@ -19,7 +19,7 @@
                     <span>eMarket</span>
                 </div>
                 <nav>
-                    <ul>
+                    <ul id="mainNav">
                         <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#about">About VR Headset</a></li>
                         <li><a href="#features">Features</a></li>
@@ -33,22 +33,28 @@
                         <span>Purchase</span>
                     </a>
                 </div>
-                <div class="navMobile">
+                <div id="mainMobileNav" class="navMobile">
                     <div class="menu" onclick="showMenu()">
                         <img src="assets/icons/menu.png" alt="Menu">
                     </div>
                     <div id="mobileNav" class="inner">
                         <ul>
-                            <li><img src="assets/icons/homeicon.png" alt="Home"><a href="#home" class="active">Home</a>
+                            <li onclick="window.location.href='#home'"><img src="assets/icons/homeicon.png"
+                                    alt="Home">Home
                             </li>
-                            <li><img src="assets/icons/abouticon.png" alt="About"><a href="#about">About VR Headset</a>
+                            <li onclick="window.location.href='#about'"><img src="assets/icons/abouticon.png"
+                                    alt="About">About VR Headset
                             </li>
-                            <li><img src="assets/icons/featuresicon.png" alt="Features"><a href="#features">Features</a>
+                            <li onclick="window.location.href='#features'"><img src="assets/icons/featuresicon.png"
+                                    alt="Features">Features
                             </li>
-                            <li><img src="assets/icons/pricingicon.png" alt="Pricing"><a href="#pricing">Pricing</a>
+                            <li onclick="window.location.href='#pricing'"><img src="assets/icons/pricingicon.png"
+                                    alt="Pricing">Pricing
                             </li>
-                            <li><img src="assets/icons/contacticon.png" alt="Contact"><a href="#contact">Contact</a>
+                            <li onclick="window.location.href='#contact'"><img src="assets/icons/contacticon.png"
+                                    alt="Contact">Contact
                             </li>
+                            <li class="line"></li>
                             <li onclick="hideMenu()"><img src="assets/icons/closeicon.png" alt="Close">Close Menu
                             </li>
                         </ul>
@@ -484,7 +490,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Company Name. All rights reserved.</p>
+                <p>&copy; 2024 AymanBuilds. All rights reserved.</p>
             </div>
         </footer>
     </div>
