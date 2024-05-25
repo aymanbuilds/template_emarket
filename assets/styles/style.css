@@ -17,9 +17,18 @@ body {
     overflow-y: auto;
 }
 
+.hidden{
+    opacity: 0;
+}
+
+.animate{
+    opacity: 1;
+    transition: 0.7s ease-in-out;
+}
+
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 0px;
+    height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {

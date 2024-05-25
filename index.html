@@ -12,7 +12,33 @@
 
 <body>
     <div class="wrapper">
-        <div class="headerWrapper">
+        <div id="mainMobileNav" class="navMobile">
+            <div class="menu" onclick="showMenu()">
+                <img src="assets/icons/menu.png" alt="Menu">
+            </div>
+            <div id="mobileNav" class="inner">
+                <ul>
+                    <li onclick="window.location.href='#home'"><img src="assets/icons/homeicon.png" alt="Home">Home
+                    </li>
+                    <li onclick="window.location.href='#about'"><img src="assets/icons/abouticon.png" alt="About">About
+                        VR Headset
+                    </li>
+                    <li onclick="window.location.href='#features'"><img src="assets/icons/featuresicon.png"
+                            alt="Features">Features
+                    </li>
+                    <li onclick="window.location.href='#pricing'"><img src="assets/icons/pricingicon.png"
+                            alt="Pricing">Pricing
+                    </li>
+                    <li onclick="window.location.href='#contact'"><img src="assets/icons/contacticon.png"
+                            alt="Contact">Contact
+                    </li>
+                    <li class="line"></li>
+                    <li onclick="hideMenu()"><img src="assets/icons/closeicon.png" alt="Close">Close Menu
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="mainHeaderWrapper" class="headerWrapper">
             <header class="main">
                 <div class="logoContainer">
                     <img src="assets/icons/logo.png" alt="Logo">
@@ -32,33 +58,6 @@
                         <img src="assets/icons/purchase.png" alt="Purchase">
                         <span>Purchase</span>
                     </a>
-                </div>
-                <div id="mainMobileNav" class="navMobile">
-                    <div class="menu" onclick="showMenu()">
-                        <img src="assets/icons/menu.png" alt="Menu">
-                    </div>
-                    <div id="mobileNav" class="inner">
-                        <ul>
-                            <li onclick="window.location.href='#home'"><img src="assets/icons/homeicon.png"
-                                    alt="Home">Home
-                            </li>
-                            <li onclick="window.location.href='#about'"><img src="assets/icons/abouticon.png"
-                                    alt="About">About VR Headset
-                            </li>
-                            <li onclick="window.location.href='#features'"><img src="assets/icons/featuresicon.png"
-                                    alt="Features">Features
-                            </li>
-                            <li onclick="window.location.href='#pricing'"><img src="assets/icons/pricingicon.png"
-                                    alt="Pricing">Pricing
-                            </li>
-                            <li onclick="window.location.href='#contact'"><img src="assets/icons/contacticon.png"
-                                    alt="Contact">Contact
-                            </li>
-                            <li class="line"></li>
-                            <li onclick="hideMenu()"><img src="assets/icons/closeicon.png" alt="Close">Close Menu
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </header>
             <section id="home" class="descriptive">
@@ -434,7 +433,7 @@
                 </div>
             </section>
         </main>
-        <footer>
+        <footer id="mainFooter">
             <div class="inner">
                 <div>
                     <h2>Our Links</h2>
